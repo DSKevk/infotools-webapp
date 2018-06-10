@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 
 import { MatTabsModule, MatToolbarModule, MatIconModule } from '@angular/material';
 import { ProduitModule } from './produit/produit.module';
+import { RendezVousModule } from './rendez-vous/rendez-vous.module';
 
 const matModules = [
   MatTabsModule,
@@ -23,6 +24,7 @@ const matModules = [
     BrowserAnimationsModule,
 
     ProduitModule,
+    RendezVousModule,
 
     ...matModules,
   ],

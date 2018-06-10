@@ -1,0 +1,26 @@
+<mat-card>
+  <mat-card-header>
+    <div id="icon-container" mat-card-avatar>
+      <mat-icon *ngIf="rendezVous?.status === 'done'" class="icon done">done</mat-icon>
+      <mat-icon *ngIf="rendezVous?.status === 'waiting'" class="icon waiting">date_range</mat-icon>
+      <mat-icon *ngIf="rendezVous?.status === 'rescheduled'" class="icon rescheduled">update</mat-icon>
+      <mat-icon *ngIf="rendezVous?.status === 'canceled'" class="icon canceled">close</mat-icon>
+    </div>
+
+    <button mat-button class="action-button" [matMenuTriggerFor]="actionMenu"><mat-icon>more_vert</mat-icon></button>
+    <mat-menu #actionMenu="matMenu">
+      <button mat-menu-item><mat-icon class="done">done</mat-icon>Valider</button>
+      <button mat-menu-item><mat-icon class="rescheduled">update</mat-icon>Reporter</button>
+      <button mat-menu-item><mat-icon class="canceled">close</mat-icon>Annuler</button>
+    </mat-menu>
+
+    <mat-card-title>RDV avec
+      <b>{{ rendezVous.client.firstname }} {{ rendezVous.client.lastname }}</b>
+    </mat-card-title>
+    <mat-card-subtitle>le
+      <i>{{ rendezVous.date | date: 'dd/MM/yy hh:mm' }}</i> 
+      <br/>
+      à <i>{{rendezVous.client.address }}</i>
+    </mat-card-subtitle>
+  </mat-card-header>
+</mat-card>

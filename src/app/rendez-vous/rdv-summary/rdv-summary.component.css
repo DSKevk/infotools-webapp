@@ -1,0 +1,42 @@
+mat-card {
+    margin-bottom: 8px;
+}
+
+mat-card-subtitle {
+    margin-bottom: 0;
+}
+
+#icon-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.done {
+    color: green !important;
+}
+
+.waiting {
+    color: #72a8ff !important;
+}
+
+.rescheduled {
+    color: orange !important;
+}
+
+.canceled {
+    color: red !important;
+}
+
+.icon {
+    width: auto;
+    height: auto;
+    font-size: 36px;
+}
+
+.action-button {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    padding: 0;
+}
