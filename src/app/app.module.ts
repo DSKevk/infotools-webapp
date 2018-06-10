@@ -1,11 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
-const matModules = {
+import { MatTabsModule, MatToolbarModule, MatIconModule } from '@angular/material';
+import { ProduitModule } from './produit/produit.module';
 
-};
+const matModules = [
+  MatTabsModule,
+  MatToolbarModule,
+  MatIconModule,
+];
 
 
 @NgModule({
@@ -13,7 +19,12 @@ const matModules = {
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule,
+
+    ProduitModule,
+
+    ...matModules,
   ],
   providers: [],
   bootstrap: [AppComponent]

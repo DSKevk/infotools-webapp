@@ -1,0 +1,23 @@
+div {
+    width: auto !important;
+    height: auto !important;
+}
+
+mat-card {
+    padding: 8px 16px;
+}
+
+mat-card-header {
+    display: flex;
+    align-items: center;
+}
+
+h4 {
+    margin: 0;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
