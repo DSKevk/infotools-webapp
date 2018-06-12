@@ -1,0 +1,22 @@
+<mat-accordion>
+  <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Commande du {{ commande.date | date: 'dd/MM/yyyy' }}
+        <mat-icon>all_inbox</mat-icon>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <div *ngIf="panelOpenState">
+      <div *ngFor="let produit of commande.produits" class="row">
+        <span>{{ produit.libelle }}</span>
+        <span>x{{ produit.quantite }}</span>
+        <span>{{ produit.prix }}€</span>
+      </div>
+      <mat-divider></mat-divider>
+      <div class="row">
+        <span>Total</span>
+        <span> {{ getTotalCommande() }}€</span>
+      </div>
+    </div>
+  </mat-expansion-panel>
+</mat-accordion>

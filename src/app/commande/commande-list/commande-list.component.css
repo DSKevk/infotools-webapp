@@ -1,0 +1,12 @@
+.margin {
+  padding: 8px 16px 0 16px;
+  width: 90%;
+}
+
+.space-under {
+  margin: 8px;
+}
+
+.center {
+  text-align: center !important;
+}

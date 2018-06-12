@@ -1,0 +1,11 @@
+<h3>Modification de la date</h3>
+<mat-dialog-content>
+
+  <mat-form-field class="full-width">
+    <input matInput placeholder="Date (YYYY-MM-DD HH:mm)" [(ngModel)]="data.date">
+  </mat-form-field>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button mat-button [mat-dialog-close]=data cdkFocusInitial>Valider</button>
+</mat-dialog-actions>

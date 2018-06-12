@@ -1,0 +1,19 @@
+<h3>Ajout d'un RDV</h3>
+<mat-dialog-content>
+  <mat-form-field>
+    <mat-select placeholder="Client" [(ngModel)]="data.clientID">
+      <mat-option *ngFor="let client of clients$ | async" [value]="client.id">
+        {{ client.prenom }} {{ client.nom }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field class="full-width">
+    <input matInput placeholder="Date (YYYY-MM-DD HH:mm)" [(ngModel)]="data.inputDate">
+  </mat-form-field>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close>Annuler</button>
+  <button mat-button [mat-dialog-close]=data cdkFocusInitial>Valider</button>
+</mat-dialog-actions>

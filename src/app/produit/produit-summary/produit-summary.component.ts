@@ -8,8 +8,8 @@ import { Product } from '../../models/';
       <mat-card-header>
         <div mat-card-avatar><mat-icon>devices</mat-icon></div>
           <h4 class="title">
-            <span id="product">{{ product.name }}</span>
-            <span id="price">{{ product.price }}€</span>
+            <span id="product">{{ product.libelle }}</span>
+            <span id="price">{{ product.prix }}€</span>
           </h4>
       </mat-card-header>
     </mat-card>
