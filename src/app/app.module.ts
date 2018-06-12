@@ -4,15 +4,26 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
-import { MatTabsModule, MatToolbarModule, MatIconModule } from '@angular/material';
+import {
+  MatTabsModule,
+  MatToolbarModule,
+  MatIconModule,
+  MatCardModule,
+  MatInputModule,
+  MatButtonModule
+} from '@angular/material';
 import { ProduitModule } from './produit/produit.module';
 import { RendezVousModule } from './rendez-vous/rendez-vous.module';
 import { CommandeModule } from './commande/commande.module';
+import { FormsModule } from '@angular/forms';
 
 const matModules = [
   MatTabsModule,
   MatToolbarModule,
   MatIconModule,
+  MatCardModule,
+  MatInputModule,
+  MatButtonModule,
 ];
 
 
@@ -23,6 +34,8 @@ const matModules = [
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+
+    FormsModule,
 
     ProduitModule,
     RendezVousModule,
@@ -45,4 +58,4 @@ export class AppModule {
     };
     localStorage.setItem('user', JSON.stringify(user));
   }
- }
+}

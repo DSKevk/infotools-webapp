@@ -10,7 +10,21 @@ import { RendezVousService } from './rendez-vous/rendez-vous.service';
 })
 export class AppComponent {
 
+  isLogged = false;
+  login: string;
+  password: string;
+  showError = false;
+
   constructor(private dialog: MatDialog, private rdvService: RendezVousService) { }
+
+  connect() {
+    if (this.login === 'dskevin' && this.password === 'root') {
+      this.showError = false;
+      this.isLogged = true;
+    } else {
+      this.showError = true;
+    }
+  }
 
   openAddDialog() {
     const dialogRef = this.dialog.open(AddRdvDialogComponent);

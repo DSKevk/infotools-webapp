@@ -9,3 +9,27 @@
 .white {
     color: white;
 }
+
+.error {
+  font-style: italic;
+  color: red;
+}
+
+.login-page {
+  height: 100vh;
+}
+
+.login-card {
+  margin: 16px;
+  top: 23%;
+}
+
+.title-icon {
+  margin-right: 8px; 
+}
+
+h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
