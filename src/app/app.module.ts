@@ -57,5 +57,9 @@ export class AppModule {
       mail: 'dos_santos.kevin@bbox.fr',
     };
     localStorage.setItem('user', JSON.stringify(user));
+
+    if (!localStorage.getItem('pricePerKg')) {
+      localStorage.setItem('pricePerKg', '2');
+    }
   }
 }

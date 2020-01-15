@@ -2,3 +2,22 @@
     display: flex;
     justify-content: space-between;
 }
+
+.grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+}
+
+.align-center {
+    display: flex;
+    justify-content: center;
+}
+
+.align-end {
+    display: flex;
+    justify-content: flex-end;
+}
+
+mat-divider {
+    margin: 4px 0;
+}

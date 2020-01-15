@@ -7,15 +7,28 @@
       </mat-panel-title>
     </mat-expansion-panel-header>
     <div *ngIf="panelOpenState">
-      <div *ngFor="let produit of commande.produits" class="row">
+      <div *ngFor="let produit of commande.produits" class="grid">
         <span>{{ produit.libelle }}</span>
-        <span>x{{ produit.quantite }}</span>
-        <span>{{ produit.prix }}€</span>
+        <span class="align-center">x{{ produit.quantite }}</span>
+        <span class="align-center">{{ getTotalPoidsLigne(produit) }}kg</span>
+        <span class="align-end">{{ getTotalLigne(produit) }}€</span>
       </div>
       <mat-divider></mat-divider>
+      <!-- <div class="grid">
+        <span>Total Prix</span>
+        <span class="align-center">x{{ getTotalQuantityCommande() }}</span>
+        <span id="spacer"></span>
+        <span class="align-end"> {{ getTotalCommande() }}€</span>
+      </div> -->
+      <div class="grid">
+        <span>Total Exp.</span>
+        <span id="spacer"></span>
+        <span class="align-center">{{ getTotalPoidsCommande() }}kg</span>
+        <span class="align-end"> {{ getTotalDelivery() }}€</span>
+      </div>
       <div class="row">
         <span>Total</span>
-        <span> {{ getTotalCommande() }}€</span>
+        <span> {{ getTotalAndDelivery() }}€</span>
       </div>
     </div>
   </mat-expansion-panel>
